@@ -1,0 +1,86 @@
+.nav-list {
+    display: flex;
+}
+
+.nav-list li {
+    width: 33.3%;
+    text-align: center;
+    list-style: none;
+}
+
+header, main, aside, footer {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto auto;
+}
+
+header {
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+aside {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+main {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+footer{
+    grid-row: 3;
+    grid-column: 1/4;
+}
+
+@media (max-width: 500px) {
+
+    .nav-list{
+        display: block;
+    }
+
+    /* we were not rerquired to change this but i did anyway */
+    .nav-list li {
+        width: 100%;
+        text-align: center;
+    }
+
+    aside{
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    footer{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    main{
+        grid-column: 1/4;
+        grid-row: 2;
+    }
+}
+
+/* Extras */
+
+#results {
+    border: 1px dashed black;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+}
+
+#add-owner-form {
+    display: none;
+}
